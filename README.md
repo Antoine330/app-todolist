@@ -1,27 +1,69 @@
-# AppTodolist
+# Context
+Our fantastic product owner has a wonderful, amazing and revolutionary idea... he wants to build a new Todo application. 
+He has a good idea of the application behavior and comes with a backlog containing the following user stories :
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
-## Development server
+# User stories
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## 1 : List my TODOs
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Description :
+As a user I would like to list my current todos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Acceptance criterias :
+- Each todo could have, at minimal, a related state and title
+- Some hard-coded todos will be initialized in this context to demonstrate the tool 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 2 : Change a TODO state
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Description :
+As a user I would like to change a todo state by checking a "box"
 
-## Further help
+### Acceptance criterias :
+- When a todo is done, it should be placed at the bottom of the list and should be crossed out
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 3 : Detail a TODO
+
+
+### Description :
+As a user I would like to display one of my todo in a separate or dedicated view.
+This todo will contain its title and a description (which is a new information not shown in the previous view).
+
+### Acceptance criterias :
+- We can click on a todo (by any way) to access the details view of the todo
+- The todo could be accessed via a unique URL
+
+## 4 : Add a new TODO
+
+
+### Description :
+As a user I would like to add a new todo in my list
+
+### Acceptance criterias :
+- The todo title is required
+- The todo description can be empty
+- The newly created todo has to be on top of the list of todos
+- You are free to choose the design / interaction 
+
+
+# Technical environment
+You're working in the I4DWeb Team which provides the following technical recommendations :
+- The application should be based on Angular Framework
+- The project should rely on NgRx for state management 
+- To keep the UI simple, the use of Material components is highly recommended (material.angular.io)
+- Code quality is very important, so all the code has to be covered by unit tests
+- Each user story should be realized in its own commit on master
+- The product owner is curious and likes to read the application code on Github and test it via Github Pages
+- The application should have a mocked backend and store all todos on it (extension of HttpXhrBackend)
+
+
+# Bonus
+You can add any new functionality in this wonderful project if you want to, in order to satisfy your PO 
+
+
+
