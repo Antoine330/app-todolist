@@ -1,0 +1,40 @@
+<div class="card-todo">
+    <h4>Tasks : </h4>
+    <div class="box">
+        <table>
+            <tbody>
+                <tr *ngFor="let task of tasks; let i = index">
+                    <th><input class="checkmark" (click)="state(i)" id="check" type="checkbox"></th>
+                    <th class="title {{ (task.done) ? 'state' : '' }}">{{task.title}}</th>
+                    <th> <a> <i (click)="show(i)" class="fa fa-eye"></i></a></th>
+                    <th><i (click)="delete(i)" class="fa fa-trash"></i></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card">
+        <input type="text" placeholder="Enter a title" aria-label="Enter a title" [(ngModel)]="newTask">
+        <textarea type="text" placeholder="Enter a description" aria-label="Enter a description"
+            [(ngModel)]="newDescription"></textarea>
+        <div class="btn-container">
+            <button class="btn" (click)="addTask()">Add Task</button>
+        </div>
+    </div>
+</div>
+
+<div class="card-show" *ngFor="let showTask of showTasks">
+
+    <h4>Detailed task </h4>
+    <div>
+        <p>Title :</p>
+        {{showTask.title}}
+    </div>
+    <div *ngIf="showTask.description != null; else elseBlock">
+        <p>Description :</p>
+        {{showTask.description}}
+    </div>
+
+    <ng-template #elseBlock>
+        <p>No description</p>
+    </ng-template>
+</div>

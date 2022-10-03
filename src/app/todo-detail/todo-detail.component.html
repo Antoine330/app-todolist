@@ -1,0 +1,19 @@
+<h1>Task : Details</h1>
+
+<div class="content">
+    <div >
+        <div class="todo-detail-title" >
+            {{ task.title }}
+        </div>
+        <div class="todo-detail-description">
+            {{ task.description }}
+        </div>
+    </div>
+</div>
+
+<div class="actions">
+    <button (click)="handleBack()">
+        <i class="fa fa-arrow-left arrow"></i>
+        <span>Retour</span>
+    </button>
+</div>

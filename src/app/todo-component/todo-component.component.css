@@ -1,0 +1,76 @@
+.box {
+    display: grid;
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+}
+
+.state {
+    text-decoration: line-through;
+}
+
+.card {
+    display: inline-grid;
+    gap: 15px;
+    width: 100%;
+}
+
+.card-todo {
+    background-color: azure;
+    padding: 5%;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.card-show {
+    background-color: azure;
+    padding: 5%;
+    border-radius: 30px;
+}
+
+p {
+    font-weight: bold;
+}
+
+table {
+    background-color: darkgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+th {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.title {
+    text-align: left;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border-color: black;
+    font-family: cursive;
+}
+
+
+.btn {
+    color: black;
+    border-color: beige;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    border-radius: 30px;
+}

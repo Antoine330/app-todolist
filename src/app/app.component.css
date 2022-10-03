@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    margin: 5% 30%;
+}
+
+
+@media screen and (max-width: 650px) {
+    .container {
+        margin: unset;
+    }
+    
+}
